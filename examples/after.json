@@ -1,0 +1,27 @@
+{
+  "tools": [
+    {
+      "name": "search_documents",
+      "description": "Search across fictional documents",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "query": {"type":"string","minLength":3},
+          "limit": {"type":"integer","minimum":1,"maximum":50},
+          "category": {"type":"string","enum":["manual","faq"]},
+          "region": {"type":"string"}
+        },
+        "required": ["query","region"],
+        "additionalProperties": false
+      }
+    },
+    {
+      "name": "summarize",
+      "inputSchema": {"type":"object","properties":{"text":{"type":"string"}},"required":["text"]}
+    },
+    {
+      "name": "get_status",
+      "inputSchema": {"type":"object","properties":{}}
+    }
+  ]
+}

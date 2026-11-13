@@ -1,0 +1,22 @@
+{
+  "tools": [
+    {
+      "name": "search_documents",
+      "description": "Return matching fictional documents",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "query": {"type":"string","minLength":1},
+          "limit": {"type":"integer","minimum":1,"maximum":100},
+          "category": {"type":"string","enum":["manual","guide","faq"]}
+        },
+        "required": ["query"],
+        "additionalProperties": false
+      }
+    },
+    {
+      "name": "summarize",
+      "inputSchema": {"type":"object","properties":{"text":{"type":"string"}},"required":["text"]}
+    }
+  ]
+}

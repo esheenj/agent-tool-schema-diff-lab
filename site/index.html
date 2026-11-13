@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#0b1018">
+  <meta name="description" content="Compare AI agent and MCP tool schemas before deploying. Flag removed tools, new required fields, narrower enums and contract risks. Runs offline.">
+  <title>Agent Tool Schema Diff Lab · Esheen Labs</title>
+  <link rel="stylesheet" href="./style.css">
+  <script type="module" src="./app.mjs"></script>
+</head>
+<body>
+ <div class="shell">
+  <header class="header"><a class="brand" href="https://github.com/esheenj/agent-tool-schema-diff-lab" rel="noopener noreferrer"><span class="mark">∑</span><span>ESHEEN <b>LABS</b></span></a><div class="meta"><span class="dot"></span>LOCAL-FIRST ENGINEERING TOOL <span class="version">01 / OSS</span></div></header>
+  <main>
+   <section class="hero">
+     <div class="eyebrow"><span class="line"></span> Developer intelligence / Compatibility</div>
+     <h1>Agent tools change.<br><em>Know what breaks.</em></h1>
+     <p>Compare two versions of your MCP or AI function-tool catalog. Find contract changes before your agents, clients, or workflows encounter them.</p>
+     <div class="feature"><span>01 / No API key</span><span>02 / Runs in your browser</span><span>03 / Actionable diff</span></div>
+   </section>
+   <section class="workspace" aria-labelledby="compare-heading">
+     <div class="section-heading"><div><span class="overline">WORKSPACE / 001</span><h2 id="compare-heading">Contract comparison</h2></div><button id="load" class="quiet" type="button">Load example <span aria-hidden="true">↗</span></button></div>
+     <div class="editors">
+       <div class="editor"><div class="editor-label"><label for="before">Previous version</label><small>BASELINE.JSON</small></div><textarea id="before" spellcheck="false" aria-describedby="hint" placeholder='{"tools":[{"name":"search","inputSchema":{"type":"object"}}]}'></textarea></div>
+       <div class="editor"><div class="editor-label"><label for="after">Current version</label><small>PROPOSED.JSON</small></div><textarea id="after" spellcheck="false" aria-describedby="hint" placeholder='{"tools":[{"name":"search","inputSchema":{"type":"object"}}]}'></textarea></div>
+     </div>
+     <div class="toolbar"><p id="hint">Paste an array of tool definitions or an object containing a <code>tools</code> array. Up to 1 MiB each.</p><button id="compare" class="primary" type="button">Compare contracts <span aria-hidden="true">→</span></button></div>
+   </section>
+   <section class="results" aria-labelledby="result-heading">
+     <div class="section-heading"><div><span class="overline">ANALYSIS / 002</span><h2 id="result-heading">Compatibility report</h2></div><span id="state" class="state" role="status" aria-live="polite">READY</span></div>
+     <div class="metrics"><div><strong id="breaking">—</strong><span>BREAKING</span></div><div><strong id="review">—</strong><span>REVIEW</span></div><div><strong id="info">—</strong><span>INFORMATIONAL</span></div></div>
+     <p id="summary" class="summary">Compare the catalogs to generate a structured, exportable review.</p>
+     <ol id="changes" class="changes" aria-live="polite"></ol>
+     <div class="result-footer"><span>DETERMINISTIC • SYNTHETIC EXAMPLE AVAILABLE</span><button id="download" class="quiet" type="button" disabled>Download JSON report ↓</button></div>
+   </section>
+   <section class="about"><div><span class="overline">IMPLEMENTATION NOTE</span><h2>Designed for review.<br>Not false certainty.</h2></div><p>This tool checks a deliberately bounded subset of JSON Schema. It does not prove semantic compatibility, authorization, identity or actual remote agent behavior. Complex constraints trigger manual-review notices. All pasted data stays in your browser; there is no telemetry or external API call.</p></section>
+  </main>
+  <footer><span>ESHEEN LABS · ORIGINAL OPEN-SOURCE TOOLING</span><a href="https://github.com/esheenj/agent-tool-schema-diff-lab" rel="noopener noreferrer">VIEW SOURCE / MIT LICENSE ↗</a></footer>
+ </div>
+</body>
+</html>

@@ -1,0 +1,14 @@
+{
+  "name": "agent-tool-schema-diff-lab",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Offline MCP and AI tool contract change checker",
+  "type": "module",
+  "license": "MIT",
+  "engines": {"node": ">=20"},
+  "scripts": {
+    "test": "node --test tests/*.test.mjs",
+    "build": "node scripts/build.mjs",
+    "compare": "node src/cli.mjs examples/before.json examples/after.json"
+  }
+}
