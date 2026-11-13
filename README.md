@@ -67,6 +67,10 @@ This is a **conservative contract inspection**, not a complete JSON Schema compa
 
 **Contributions:** please open a small issue describing the tool schema shape and expected classification. Do not include secrets, private prompts, customer data or proprietary schema examples; create fictional reproducers instead.
 
+## Optional support
+
+If the tool is useful, [support Esheen Labs through the reviewed public funding page](https://esheenj.github.io/compound-intelligence-starter/support.html). All MIT examples remain free. Crypto destinations are exchange deposit addresses: confirm the current address, network and minimum before transferring; GitHub Sponsors and fiat checkout are not represented as active.
+
 ## Project boundaries
 
 No private Cortex/Commander/SIGMA code, credentials, trading authority, financial integrations or owner infrastructure is bundled or used. This public tool neither verifies an agent's identity nor authorizes its actions.
