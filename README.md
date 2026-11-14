@@ -1,10 +1,20 @@
-# Agent Tool Schema Diff Lab
+# Agent Tool Contract Inspector
 
 **Agent tools change. Know what breaks.**
 
 Offline, MIT-licensed compatibility checker for MCP-style tools, Anthropic tool catalogs, and OpenAI function-tool declarations. Compare a previous and proposed JSON tool list to catch changes that are easy to miss in reviews: removed tools, newly required parameters, narrowed types or enums, tightened numeric bounds and changed object shapes.
 
 Designed and maintained by **Esheen Labs**. Fictional examples; no account, paid API, telemetry, backend or private service required.
+
+## Product purpose
+
+**Agent Tool Contract Inspector** is the public display name for this local-first schema-diff utility. It helps AI application developers, MCP integration teams and agencies discover *declared* compatibility changes before updating tool definitions.
+
+**Input:** two supplied versions of MCP, OpenAI-style or Anthropic-style tool declarations. **Output:** a deterministic breaking-change, review-needed and informational report, with an offline browser playground and Node CLI.
+
+**Commercial pathway:** this free MIT tool can support scoped AI-integration and migration-review enquiries through [Sigma Code](mailto:info@sigmacode.co.za?subject=Agent%20tool%20contract%20review). An enquiry is not a booked engagement, paid audit or certified compatibility assessment.
+
+**Boundary:** analysis covers a supported subset of schema constraints, not live execution, handler behavior, semantic safety, authentication or authorization. The existing repository slug, CLI commands and package identifier remain unchanged.
 
 ## Try it
 
